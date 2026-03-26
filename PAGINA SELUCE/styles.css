@@ -550,3 +550,49 @@ body {
     padding: 25px;
     text-align: center;
 }
+/* --- Estilos para el Logo en la Navbar --- */
+
+/* Contenedor flex para alinear imagen y texto */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre la imagen y el texto */
+    text-decoration: none; /* Por si decides envolverlo en un <a> luego */
+}
+
+/* Estilos para la imagen del logo */
+.logo-img {
+    height: 45px; /* Ajusta la altura según necesites */
+    width: auto; /* Mantiene la proporción */
+    
+    /* MAGIA CSS: Elimina visualmente el fondo blanco */
+    mix-blend-mode: multiply; 
+    
+    /* Asegura que se vea nítido */
+    object-fit: contain; 
+}
+
+/* Estilos para el texto del logo (manteniendo lo anterior) */
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+}
+
+.logo-text span {
+    color: var(--accent-color);
+}
+
+/* Ajuste responsivo para el logo en móviles */
+@media (max-width: 768px) {
+    .logo-container {
+        gap: 8px;
+    }
+    .logo-img {
+        height: 35px; /* Más pequeño en móvil */
+    }
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
